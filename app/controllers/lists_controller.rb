@@ -1,4 +1,5 @@
-class ListsController < ApplicationController
+# change to ProtectedController ApplicationController
+class ListsController < ProtectedController
   before_action :set_list, only: [:show, :update, :destroy]
 
   # GET /lists
@@ -13,6 +14,14 @@ class ListsController < ApplicationController
   # GET /lists/1.json
   def show
     render json: @list
+  end
+
+  # GET /userlists
+  def user_lists
+    # @userlist = 'use token to find user id then
+    #               select * from lists where user_id = .id'
+    @userlist = current_user.lists
+    render :json => {:test => 'this is just a test', :userlists => @userlist }
   end
 
   # POST /lists
@@ -54,6 +63,6 @@ class ListsController < ApplicationController
     end
 
     def list_params
-      params.require(:list).permit(:type, :user_id)
+      params.require(:list).permit(:category, :user_id)
     end
 end
