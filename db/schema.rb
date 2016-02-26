@@ -17,14 +17,12 @@ ActiveRecord::Schema.define(version: 20160225215249) do
   enable_extension "plpgsql"
 
   create_table "lists", force: :cascade do |t|
-    t.string   "type"
-    t.string   "user"
+    t.string   "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
   end
 
-  add_index "lists", ["user"], name: "index_lists_on_user", using: :btree
   add_index "lists", ["user_id"], name: "index_lists_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|

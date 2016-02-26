@@ -1,8 +1,7 @@
 class CreateLists < ActiveRecord::Migration
   def change
     create_table :lists do |t|
-      t.string :type
-      t.string :user, index: true, foreign_key: true
+      t.string :category
 
       t.timestamps null: false
     end
