@@ -1,21 +1,32 @@
 #!/bin/bash
+URL='http://localhost:3000'
 
-curl --include --request POST http://localhost:3000/sign-up \
+echo 'json here is good :'
+curl ${URL}/sign-up \
+  --silent \
+  --request POST \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "an@example.email",
-      "password": "an example password",
-      "password_confirmation": "an example password"
+      "email": "test",
+      "password": "password",
+      "password_confirmation": "password"
     }
   }'
 
-curl --include --request POST http://localhost:3000/sign-up \
+echo
+echo '----------------------------------------------'
+echo 'failure is good 400'
+
+curl ${URL}/sign-up \
+  --include \
+  --request POST \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "another@example.email",
-      "password": "an example password",
-      "password_confirmation": "an example password"
+      "email": "test",
+      "password": "password",
+      "password_confirmation": "password"
     }
   }'
+echo
