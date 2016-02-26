@@ -1,4 +1,4 @@
-<% project_name = 'to-do-list' %>
+<% project_name = 'ToDoList' %>
 
 default: &default
   adapter: postgresql
