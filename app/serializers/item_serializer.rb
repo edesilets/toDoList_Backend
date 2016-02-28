@@ -1,3 +1,3 @@
 class ItemSerializer < ActiveModel::Serializer
-  attributes :id, :todo, :list
+  attributes :id, :todo   # removed :list from json render
 end
