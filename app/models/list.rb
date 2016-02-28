@@ -1,4 +1,3 @@
 class List < ActiveRecord::Base
-  #belongs_to :user, inverse_of: :lists
-  #has_many :items, foreign_key: :list_id
+  has_many :items, inverse_of: :lists, foreign_key: 'list_id'
 end
