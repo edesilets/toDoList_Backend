@@ -1,5 +1,5 @@
 #!/bin/bash
-TOKEN='ee234250dddb1b8b86762f29212b9833'
+TOKEN='951473cfb9adf638cb12eb994c2679e3'
 echo 'Enter url after /'
 read answer
 curl http://localhost:3000/$answer \

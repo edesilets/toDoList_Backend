@@ -8,7 +8,7 @@ curl ${URL}/sign-up \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "test",
+      "email": "jess@statefarm.com",
       "password": "password",
       "password_confirmation": "password"
     }
@@ -24,7 +24,7 @@ curl ${URL}/sign-up \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
-      "email": "test",
+      "email": "frank@statefarm.com",
       "password": "password",
       "password_confirmation": "password"
     }
