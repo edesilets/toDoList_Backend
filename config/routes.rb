@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   ##### items routes ##################
-  resources :items, only: [:index, :show]
+  resources :items, except: [:new, :edit]
   ##### list routes ##################
   resources :lists, except: [:new, :edit]
   get '/userlists/', to: 'lists#user_lists'
