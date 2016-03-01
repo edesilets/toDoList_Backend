@@ -1,6 +1,6 @@
 #
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email  # , :can_edit
+  attributes :email  # :id , :can_edit
 
   # show user lists but not USERS lists tobe done.
   has_many :lists
