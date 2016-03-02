@@ -13,7 +13,7 @@ class ListsController < ProtectedController
   # GET /lists/1
   # GET /lists/1.json
   def show
-    render json: @list
+    render json: @list, serializer: ListItemSerializer
   end
 
   # POST /lists
