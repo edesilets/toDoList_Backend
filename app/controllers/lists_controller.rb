@@ -5,7 +5,7 @@ class ListsController < ProtectedController
   # GET /lists
   # GET /lists.json
   def index
-    @lists = List.all
+    @lists = current_user.lists
 
     render json: @lists
   end
@@ -14,14 +14,6 @@ class ListsController < ProtectedController
   # GET /lists/1.json
   def show
     render json: @list
-  end
-
-  # GET /userlists
-  def user_lists
-    # @userlist = 'use token to find user id then
-    #               select * from lists where user_id = .id'
-    @userlist = current_user.lists
-    render :json => {:test => 'this is just a test', :userlists => @userlist }
   end
 
   # POST /lists
