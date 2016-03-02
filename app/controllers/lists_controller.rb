@@ -51,7 +51,7 @@ class ListsController < ProtectedController
   private
 
     def set_list
-      @list = List.find(params[:id])
+      @list = current_user.lists.find(params[:id])
     end
 
     def list_params
