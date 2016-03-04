@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  ##### items/:id/items routes ##############
+  resources :lists, except: [:new, :edit] do
+    resources :items, only: :create
+  end
   ##### items routes ##################
-  resources :items, except: [:new, :edit]
-  ##### list routes ##################
-  resources :lists, except: [:new, :edit]
-  get '/userlists/', to: 'lists#user_lists'
-  ############################################
+  resources :items, only: [:show, :update, :destroy]
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
