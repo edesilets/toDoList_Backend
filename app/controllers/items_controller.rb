@@ -19,8 +19,8 @@ class ItemsController < ProtectedController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(item_params)
-
+    @list = current_user.lists.find(params[:id])
+    @item = @list.items.build(item_params)
     if @item.save
       render json: @item, status: :created, location: @item
     else
@@ -31,8 +31,6 @@ class ItemsController < ProtectedController
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
-    @item = Item.find(params[:id])
-
     if @item.update(item_params)
       head :no_content
     else
@@ -52,6 +50,7 @@ class ItemsController < ProtectedController
 
     def set_item
       @item = Item.find(params[:id])
+      fail ActiveRecord::RecordNotFound unless @item.list.user == current_user
     end
 
     def item_params

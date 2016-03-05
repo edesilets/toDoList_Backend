@@ -1,5 +1,6 @@
 #!/bin/bash
 URL='http://localhost:3000'
+#URL='https://todo-list-90562.herokuapp.com'
 
 echo 'json here is good :'
 curl ${URL}/sign-up \
@@ -18,7 +19,7 @@ echo '----------------------------------------------'
 echo  'sign IN.....'
 echo '----------------------------------------------'
 
-curl http://localhost:3000/sign-in \
+curl ${URL}/sign-in \
   --silent \
   --request POST \
   --header "Content-Type: application/json" \

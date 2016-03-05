@@ -1,4 +1,3 @@
 class ListSerializer < ActiveModel::Serializer
-  attributes :category # removed :id from json
-  has_many :items
+  attributes :id, :category # removed :todo :list from json
 end

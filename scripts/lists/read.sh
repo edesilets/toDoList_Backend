@@ -1,11 +1,12 @@
 #!/bin/bash
-TOKEN='b82952cd6c232e7ceb16bdeb4dc36cd1'
+TOKEN='d04dc1ee80d33f4cd62e59c83f3536ab'
 URL='http://localhost:3000'
 #URL='https://todo-list-90562.herokuapp.com'
 
-echo 'Enter url after /'
-read answer
-curl ${URL}/$answer \
+echo '-----------------------------------------'
+echo '-----------Read Users Lists--------------'
+echo '-----------------------------------------'
+curl ${URL}/lists \
   --silent \
   --request GET \
   --header "Authorization: Token token=${TOKEN}" | jsonlint
