@@ -1,8 +1,10 @@
 #!/bin/bash
-TOKEN='951473cfb9adf638cb12eb994c2679e3'
+TOKEN='d04dc1ee80d33f4cd62e59c83f3536ab'
 URL='http://localhost:3000'
 #URL="http://httpbin.org/post"
 
+echo '-----------------------------------------'
+echo '------CREATE a List Name a USER----------'
 echo '-----------------------------------------'
 curl ${URL}/lists \
   --silent \

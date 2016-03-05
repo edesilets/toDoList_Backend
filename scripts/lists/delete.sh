@@ -4,6 +4,8 @@ URL='http://localhost:3000'
 #URL="http://httpbin.org/post"
 
 echo '-----------------------------------------'
+echo '------DELTE A List and its ITEMS---------'
+echo '-----------------------------------------'
 
 curl ${URL}/lists/6 \
   --silent \
