@@ -19,7 +19,7 @@ class ItemsController < ProtectedController
   # POST /items
   # POST /items.json
   def create
-    @list = current_user.lists.find(params[:id])
+    @list = current_user.lists.find(params[:list_id])
     @item = @list.items.build(item_params)
     if @item.save
       render json: @item, status: :created, location: @item
