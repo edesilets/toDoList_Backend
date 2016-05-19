@@ -1,7 +1,8 @@
 #!/bin/bash
-LISTID='1'
-TOKEN='f176e6983dad7321202b62a6f9c2f3c3'
-URL='http://localhost:3000'
+LISTID='10'
+TOKEN='c3e441a22021340eccb40ff0b88e66b3'
+URL='https://todo-list-90562.herokuapp.com'
+#URL='http://localhost:3000'
 #URL="http://httpbin.org/post"
 # list_items POST   /lists/:list_id/items(.:format)
 

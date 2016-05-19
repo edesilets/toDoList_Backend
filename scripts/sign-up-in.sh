@@ -1,6 +1,6 @@
 #!/bin/bash
-URL='http://localhost:3000'
-#URL='https://todo-list-90562.herokuapp.com'
+#URL='http://localhost:3000'
+URL='https://todo-list-90562.herokuapp.com'
 
 echo 'json here is good :'
 curl ${URL}/sign-up \

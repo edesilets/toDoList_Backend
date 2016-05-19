@@ -1,7 +1,8 @@
 #!/bin/bash
-TOKEN='d04dc1ee80d33f4cd62e59c83f3536ab'
-URL='http://localhost:3000'
+TOKEN='373b2b8d33078acdcb85ecfbb3c4feea'
+#URL='http://localhost:3000'
 #URL="http://httpbin.org/post"
+URL='https://todo-list-90562.herokuapp.com'
 
 echo '-----------------------------------------'
 

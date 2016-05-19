@@ -1,6 +1,6 @@
 #!/bin/bash
 LISTID='7'
-TOKEN='d04dc1ee80d33f4cd62e59c83f3536ab'
+TOKEN='c3e441a22021340eccb40ff0b88e66b3'
 URL='http://localhost:3000'
 #URL="http://httpbin.org/post"
 
